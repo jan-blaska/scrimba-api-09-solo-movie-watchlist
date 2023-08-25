@@ -1,0 +1,17 @@
+/* -- RESET -- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* -- LAYOUT -- */
+body {
+    background-color: #272626;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
