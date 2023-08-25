@@ -31,7 +31,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 10px;
     background-image: url("/images/chairs-cinema.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -39,24 +39,105 @@ header {
 }
 
 header h1 {
-    font-size: 3rem; /* 48px */
+    font-size: 1.375rem; /* 22px */
     font-weight: 700;
 }
 
 header h4 {
-    font-size: 1rem; /* 16px */
+    font-size: 0.875rem; /* 14px */
     font-weight: 500;
 }
 
 .search-bar {
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input,
+.search-bar button {
+    font-size: 0.875rem; /* 14px */
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+}
+
+.search-bar input {
+    position: relative;
+    background-color: #2E2E2F;
+    border-radius: 10px 0 0 10px;
+}
+
+.search-bar i {
+    display: none;
+}
+
+.search-bar button {
+    background-color: #4B4B4B;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 50px;
+    }
+    header h1 {
+        font-size: 3rem; /* 48px */
+    }
+    header h4 {
+        font-size: 1rem; /* 16px */
+    }
+    .search-bar input,
+    .search-bar button {
+        font-size: 1rem; /* 16px */
+        padding: 10px 40px;
+        border: none;
+        color: #fff;
+        font-family: inherit;
+    }
+    .search-bar i {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        bottom: 10px;
+        left: 15px;
+    }
 }
 
 /* -- SECTION -- */
 section {
     height: calc(100vh - 300px);
+}
+
+.section-align-to-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #2E2E2F;
+}
+
+.section-align-to-center i {
+    font-size: 50px;
+}
+
+.section-align-to-center h2 {
+    font-size: 1rem; /* 16px */
+    margin: 2px;
+}
+
+@media (min-width: 768px) {
+    .section-align-to-center i {
+        font-size: 80px;
+    }
+    .section-align-to-center h2 {
+        font-size: 1.25rem; /* 20px */
+        margin: 5px;
+    }
 }
