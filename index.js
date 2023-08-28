@@ -12,13 +12,13 @@ searchBarEl.addEventListener('submit', async (e) => {
     sectionPlaceholderEl.classList.add('hidden')
     sectionCardsEl.classList.remove('hidden')
 
-    const res = await fetch(`http://www.omdbapi.com/?apikey=76d62778&s=${inputMovieNameEl.value}`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=76d62778&s=${inputMovieNameEl.value}`)
     const searchResults = await res.json()
 
     if (searchResults.Response === "True") {
         const moviesArray = []
         await Promise.all(searchResults.Search.map( async (movie) => {
-            const movieRes = await fetch(`http://www.omdbapi.com/?apikey=76d62778&i=${movie.imdbID}`)
+            const movieRes = await fetch(`https://www.omdbapi.com/?apikey=76d62778&i=${movie.imdbID}`)
             const movieData = await movieRes.json()    
             moviesArray.push(movieData)
         }))
