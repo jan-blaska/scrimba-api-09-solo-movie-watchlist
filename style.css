@@ -43,9 +43,11 @@ header h1 {
     font-weight: 700;
 }
 
-header h4 {
+header a {
     font-size: 0.875rem; /* 14px */
     font-weight: 500;
+    text-decoration: none;
+    color: #fff;
 }
 
 .search-bar {
@@ -84,13 +86,10 @@ header h4 {
 }
 
 @media (min-width: 768px) {
-    header {
-        padding: 50px;
-    }
     header h1 {
         font-size: 3rem; /* 48px */
     }
-    header h4 {
+    header a {
         font-size: 1rem; /* 16px */
     }
     .search-bar input,
@@ -110,9 +109,16 @@ header h4 {
     }
 }
 
+@media (min-width: 500px) {
+    header {
+        padding: 50px;
+    }
+}
+
 /* -- SECTION -- */
 section {
-    height: calc(100vh - 300px);
+    min-height: calc(100vh - 300px);
+    padding: 30px 10px;
 }
 
 .section-align-to-center {
@@ -123,6 +129,17 @@ section {
     color: #2E2E2F;
 }
 
+.section-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-cards :last-child {
+    border: none;
+}
+
+/* -- PLACEHOLDER FOR MOVIE CARDS -- */
 .section-align-to-center i {
     font-size: 50px;
 }
@@ -141,3 +158,112 @@ section {
         margin: 5px;
     }
 }
+
+@media (min-width: 500px) {
+    section {
+        padding: 50px;
+    }
+}
+
+/* -- MOVIE CARD -- */
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 2.5px solid #2C2C2C;
+}
+
+.movie-card p {
+    font-size: 0.875rem; /* 14px */
+}
+
+.movie-card img {
+    width: 140px;
+    height: 180px;
+}
+
+.movie-card--desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-card--desc--header,
+.movie-card--desc--subheader,
+.button-add-movie-to-watchlist {
+    display: flex;
+    align-items: center;
+}
+
+.movie-card--desc--header {
+    gap: 10px;
+}
+
+.movie-card--desc--header h5,
+.movie-card--desc--header p,
+.movie-card--desc--paragraph {
+    margin: 0;
+}
+
+.movie-card--desc--header h5 {
+    font-size: 1.375rem; /* 22px */
+}
+
+.movie-card--desc--subheader {
+    flex-direction: column;
+    align-items: start;
+}
+
+.movie-card--desc--subheader p {
+    margin: 5px 0;
+}
+
+.button-add-movie-to-watchlist {
+    gap: 7px;
+}
+
+.button-add-movie-to-watchlist:hover {
+    cursor: pointer;
+}
+
+.button-add-movie-to-watchlist i {
+    font-size: 25px;
+}
+
+.movie-card--desc--paragraph {
+    color: #A5A5A5;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .movie-card {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding: 25px 0;
+        border-bottom: 2.5px solid #2C2C2C;
+    }
+    .movie-card p {
+        font-size: 1rem; /* 16px */
+    }
+    .movie-card--desc--header h5 {
+        font-size: 1.75rem; /* 28px */
+    }
+    .movie-card--desc--subheader {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .movie-card--desc--subheader p {
+        margin: 15px 0;
+    }
+    .movie-card--desc--paragraph {
+        margin-top: 0px;
+    }
+}
+
+
+
+
+
