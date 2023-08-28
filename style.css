@@ -121,7 +121,7 @@ section {
     padding: 30px 10px;
 }
 
-.section-align-to-center {
+.section-placeholder {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,25 +135,29 @@ section {
     align-items: center;
 }
 
+.hidden {
+    display: none;
+}
+
 .section-cards :last-child {
     border: none;
 }
 
 /* -- PLACEHOLDER FOR MOVIE CARDS -- */
-.section-align-to-center i {
+.section-placeholder i {
     font-size: 50px;
 }
 
-.section-align-to-center h2 {
+.section-placeholder h2 {
     font-size: 1rem; /* 16px */
     margin: 2px;
 }
 
 @media (min-width: 768px) {
-    .section-align-to-center i {
+    .section-placeholder i {
         font-size: 80px;
     }
-    .section-align-to-center h2 {
+    .section-placeholder h2 {
         font-size: 1.25rem; /* 20px */
         margin: 5px;
     }
@@ -172,6 +176,7 @@ section {
     gap: 20px;
     padding: 25px 0;
     border-bottom: 2.5px solid #2C2C2C;
+    width: 100%;
 }
 
 .movie-card p {
@@ -180,7 +185,7 @@ section {
 
 .movie-card img {
     width: 140px;
-    height: 180px;
+    
 }
 
 .movie-card--desc {
