@@ -121,12 +121,29 @@ section {
     padding: 30px 10px;
 }
 
-.section-placeholder {
+.section-placeholder,
+.section-not-found,
+.section-empty-watchlist {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.section-placeholder {
     color: #2E2E2F;
+}
+
+.section-not-found,
+.section-empty-watchlist {
+    color: #787878;
+}
+
+.section-not-found p,
+.section-empty-watchlist p {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 600;
+    text-align: center;
 }
 
 .section-cards {
@@ -153,6 +170,15 @@ section {
     margin: 2px;
 }
 
+.section-empty-watchlist a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
 @media (min-width: 768px) {
     .section-placeholder i {
         font-size: 80px;
@@ -160,6 +186,11 @@ section {
     .section-placeholder h2 {
         font-size: 1.25rem; /* 20px */
         margin: 5px;
+    }
+    .section-not-found p,
+    .section-empty-watchlist p {
+        font-size: 1.375rem; /* 22px */
+        margin: 0.3em;
     }
 }
 
@@ -196,7 +227,8 @@ section {
 
 .movie-card--desc--header,
 .movie-card--desc--subheader,
-.button-add-movie-to-watchlist {
+.button-add-movie-to-watchlist,
+.button-remove-movie-from-watchlist {
     display: flex;
     align-items: center;
 }
@@ -224,11 +256,13 @@ section {
     margin: 5px 0;
 }
 
-.button-add-movie-to-watchlist {
+.button-add-movie-to-watchlist,
+.button-remove-movie-from-watchlist {
     gap: 7px;
 }
 
-.button-add-movie-to-watchlist:hover {
+.button-add-movie-to-watchlist:hover,
+.button-remove-movie-from-watchlist:hover {
     cursor: pointer;
 }
 

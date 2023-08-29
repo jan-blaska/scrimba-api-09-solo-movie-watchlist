@@ -22,27 +22,20 @@
     <div class="container">
         <header>
             <h1>Find your film</h1>
-            <a href="/watchlist.html">My Watchlist</a>
-            <form class="search-bar" id="search-bar">
-                <div>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <input type="text" name="" id="input-movie-name" placeholder="Search for a movie">
-                <button>Search</button>
-            </form>
+            <a href="/index.html">Search for movies</a>
         </header>
-        <section id="section-placeholder" class="section-placeholder">
-            <i class="fa-solid fa-film"></i>
-            <h2>Start exploring</h2>
-        </section>
-        <section id="section-not-found" class="section-not-found hidden">
-            <p>Unable to find what you are looking for. Please try another search.</p>
+        <section id="section-empty-watchlist" class="section-empty-watchlist">
+            <p>Your watchlist is looking a little empty...</p>
+            <a href="/index.html">
+                <i class="fa-solid fa-circle-plus" style="color: #ffffff;" data-addmovie=${movie.imdbID}></i>
+                <p>Let´s add some movies!</p>
+            </a>
         </section>
         <section id="section-cards" class="section-cards hidden">
             <!-- Here the movie cards are rendered -->
         </section>
     </div>
-    <script src="index.js" type="module"></script>
+    <script src="watchlist.js" type="module"></script>
 </body>
 </html>
 
